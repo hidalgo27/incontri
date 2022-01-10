@@ -57,6 +57,7 @@ class Reservations extends Component
         }
     }
 
+
     public function validateData(){
 
         if($this->currentStep == 1){
@@ -80,6 +81,8 @@ class Reservations extends Component
     }
 
     public function register(){
+        $this->resetErrorBag();
+        $this->validateData();
         $from ="tania.vanessa609@gmail.com";
         $email=$this->email;
         $name=$this->name;

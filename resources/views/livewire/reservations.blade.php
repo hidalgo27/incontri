@@ -74,15 +74,15 @@
             <div class="step-three">
                 <div class="px-5 py-5 mb-4">
                     <p class="text-xl font-semibold text-gray-500 mb-8">3/3 <span class=" text-black">{{__('message.home_subtitle_15')}}</span></p>
-                    <input name="name"  wire:model="name" type="text" class="bg-white border border-gray-400 py-3 px-5 text-gray-500 w-full focus:outline-none text-sm" placeholder="{{__('message.home_p8')}}">
+                    <input name="name"  wire:model="name" type="text" class="bg-white border border-gray-400 py-3 px-5 text-gray-500 w-full focus:outline-none text-sm" placeholder="{{__('message.home_p8')}}" >
                     <p class="text-xs text-red-600 mt-2">@error('name'){{__('message.home_p18')}} @enderror</p>
                     <div class="grid md:grid-cols-2 grid-cols-1 mt-5 gap-4">  
                         <div >
-                            <input name="email"  wire:model="email" type="email" class="bg-white border border-gray-400 py-3 px-5 text-gray-500 w-full focus:outline-none text-sm" placeholder="{{__('message.home_p9')}}">
+                            <input name="email"  wire:model="email" type="email" class="bg-white border border-gray-400 py-3 px-5 text-gray-500 w-full focus:outline-none text-sm" placeholder="{{__('message.home_p9')}}" >
                             <p class="text-xs text-red-600 mt-2">@error('email'){{__('message.home_p18')}} @enderror</p>  
                         </div>
                         <div>
-                            <input name="phone"  wire:model="phone" type="text" class="bg-white border border-gray-400 py-3 px-5 text-gray-500 w-full focus:outline-none text-sm" placeholder="{{__('message.home_p10')}}">
+                            <input name="phone"  wire:model="phone" type="text" class="bg-white border border-gray-400 py-3 px-5 text-gray-500 w-full focus:outline-none text-sm" placeholder="{{__('message.home_p10')}}" >
                             <p class="text-xs text-red-600 mt-2">@error('phone'){{__('message.home_p18')}} @enderror</p> 
                         </div> 
                     </div>
@@ -107,7 +107,7 @@
             @endif
             
             @if ($currentStep == 3)
-                 <button type="submit" class="bg-crema px-6 py-2 rounded text-white font-semibold">Send</button>
+                 <button type="submit" class="bg-crema px-6 py-2 rounded text-white font-semibold" >Send</button>
             @endif
                 
                
