@@ -12,7 +12,7 @@
             @foreach ($productos as $item)
                 @if($item->stock>0)
                     <div class="relative mb-12 shadow-xl">
-                        <img src="{{asset($item['imagen'])}}" class="p-1 relative mx-auto h-auto w-auto object-cover hover:opacity-70">
+                        <img src="https://admin.incontrimachupicchu.com/{{$item['imagen']}}" class="p-1 relative mx-auto h-auto w-auto object-cover hover:opacity-70">
                         @if ($item['descuento'])
                             <div class="absolute top-0 left-0 px-2 m-2 bg-yellow-600">
                                 <span class="text-white font-medium tracking-wide text-sm">- {{$item['descuento']}}%</span>
@@ -61,7 +61,7 @@
                                 <p class=" text-center text-crema font-medium mb-4 px-4">S/. {{$item['precio']}}</p>
                             @endif 
                             <div class="flex justify-center">
-                                <button class="mx-5 mb-4 btn-secondary text-xs py-1 "><a href="{{route('shop').'/'.$item['url']}}">{{__('message.button_add')}}</a>
+                                <button class="mx-5 mb-4 btn-secondary text-xs py-1 "><a href="{{route('shop').'/'.$item['url']}}">{{__('message.button_v')}}</a>
                             </div>
                         </div>
                     </div>

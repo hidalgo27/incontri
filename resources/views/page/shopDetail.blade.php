@@ -16,7 +16,7 @@
     </header>
     <section class="py-20 px-12">
         <div class="grid md:grid-cols-2 grid-cols-1 gap-10">
-            <img src="{{$producto->imagen}}">
+            <img src="https://admin.incontrimachupicchu.com/{{$producto->imagen}}">
             <div class="my-auto">
                 @if($producto->producto_categoria)
                 <div class="flex gap-2 items-center px-4 py-4 bg-gray-50">

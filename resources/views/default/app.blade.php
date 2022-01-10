@@ -48,7 +48,7 @@
                             @endphp 
                             <div class="flex gap-5 items-center text-gray-500 text-sm justify-between ">
                                 <div class="flex gap-1 items-center">
-                                    <img src="{{$item['imagen']}}" class="w-8 h-8">
+                                    <img src="https://admin.incontrimachupicchu.com/{{$item['imagen']}}" class="w-8 h-8">
                                     <a href="{{route('shop').'/'.$item['url']}}">
                                         <p class="hover:text-crema">{{$item['name']}}
                                             <br>
@@ -167,7 +167,7 @@
                                 @endphp 
                                 <div class="flex gap-5 items-center text-gray-500 text-sm justify-between">
                                     <div class="flex gap-1 items-center">
-                                        <img src="{{$item['imagen']}}" class="w-8 h-8">
+                                        <img src="https://admin.incontrimachupicchu.com/{{$item['imagen']}}" class="w-8 h-8">
                                         <a href="{{route('shop').'/'.$item['url']}}">
                                             <p class="hover:text-crema">{{$item['name']}}
                                                 <br>

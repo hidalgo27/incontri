@@ -118,6 +118,7 @@ return [
     'aux_1' => 'Ir a la tienda',
     'aux_2' => 'Transacción realizada exitosamente',
     'aux_3' => 'Gracias por su compra.',
+    'aux_4' => 'Reserva realizada exitosamente',
 
     'button_menu' => 'Ver Menu',
     'button_reserve' => 'Reservar',

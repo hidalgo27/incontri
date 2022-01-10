@@ -27,7 +27,7 @@
                         @if($productos->find($item['id']) && $productos->find($item['id'])->stock >= $item['cantidad'] )
                         <tr class="border border-gray-200">
                             <td class="text-left px-5 py-2">
-                                <img src={{$item['imagen']}} class=" h-24 w-auto object-cover">
+                                <img src="https://admin.incontrimachupicchu.com/{{$item['imagen']}}" class=" h-24 w-auto object-cover">
                             </td>
                             <td class="text-left px-5 py-2">
                                 @if(App::getLocale()=="es")
@@ -88,7 +88,7 @@
                         @else
                             <tr class="border border-gray-200 opacity-50">
                                 <td class="text-left px-5 py-2">
-                                    <img src={{$item['imagen']}} class=" h-24 w-auto object-cover">
+                                    <img src="https://admin.incontrimachupicchu.com/{{$item['imagen']}}" class=" h-24 w-auto object-cover">
                                 </td>
                                 <td class="text-left px-5 py-2">
                                     @if(App::getLocale()=="es")
@@ -144,7 +144,7 @@
         <div class="md:hidden">
             @foreach ($cart as $item)
                 <div class="flex gap-5 items-center border-b border-dotted my-5 py-5 px-5">
-                    <img src={{$item['imagen']}} class=" h-36 w-auto object-cover">
+                    <img src="https://admin.incontrimachupicchu.com/{{$item['imagen']}}" class=" h-36 w-auto object-cover">
                     <div>
                         <p class="font-semibold text-center">
                             @if(App::getLocale()=="es")

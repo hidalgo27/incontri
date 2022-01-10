@@ -117,6 +117,7 @@ return [
     'aux_1' => 'Go to Shop',
     'aux_2' => 'Transaction successfully completed.',
     'aux_3' => 'Thank you for your purchase.',
+    'aux_4' => 'Reservation successfully completed',
 
     'button_menu' => 'View menu',
     'button_reserve' => 'Reserve now',

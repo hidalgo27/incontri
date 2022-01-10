@@ -6,6 +6,9 @@ use Livewire\Component;
 
 use Livewire\WithFileUploads;
 use App\Models\Student;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
 
 class Reservations extends Component
 {
@@ -18,7 +21,8 @@ class Reservations extends Component
     public $name;
     public $email;
     public $phone;
-
+    public $description;
+    public $success;
     public $totalSteps = 3;
     public $currentStep = 1;
 
@@ -76,23 +80,42 @@ class Reservations extends Component
     }
 
     public function register(){
-         
-        $values = array(
-            "date"=>$this->date,
-            "time"=>$this->time,
-            "guess"=>$this->guess,
-            "occasion"=>$this->occasion,
-            "name"=>$this->name,
-            "email"=>$this->email,
-            "phone"=>$this->phone,
-            "description"=>$this->description,
-        );
+        $from ="tania.vanessa609@gmail.com";
+        $email=$this->email;
+        $name=$this->name;
+        try {
+            Mail::send(['html' => 'page.email.cliente'], ['nombre' => $this->name],
+                function ($messaje) use ($email, $name) { $messaje->to($this->email, $this->name)
+                    ->subject('INCONTRI')
+                    ->from('tania.vanessa609@gmail.com', 'INCONTRI');
+            });
+            Mail::send(['html' => 'page.email.contact'], [
+                    "date"=>$this->date,
+                    "time"=>$this->time,
+                    "guess"=>$this->guess,
+                    "occasion"=>$this->occasion,
+                    "name"=>$this->name,
+                    "email"=>$this->email,
+                    "phone"=>$this->phone,
+                    "description"=>$this->description,
+                ],
+                function ($messaje) use ($from) { $messaje->to($from, 'INCONTRI')
+                    ->subject('INCONTRI - Reserva')
+                    ->from('tania.vanessa609@gmail.com', 'INCONTRI');
+            });
+            $this->reset('date');
+            $this->reset('time');
+            $this->reset('guess');
+            $this->reset('occasion');
+            $this->reset('email');
+            $this->reset('phone');
+            $this->reset('name');
+            $this->reset('description');
+            $this->success = __('message.aux_4');
 
-            Student::insert($values);
-            //   $this->reset();
-            //   $this->currentStep = 1;
-            $data = ['name'=>$this->first_name.' '.$this->last_name,'email'=>$this->email];
-            return redirect()->route('registration.success', $data);
-     
         }
+        catch (Exception $e){
+            return $e;
+        }
+    }
 }

@@ -149,7 +149,7 @@
         </div>
     </section>
 
-    <section class="pt-20 bg-banner">
+    <section class="pt-20 bg-banner" id="reservation">
         <div class=" md:hidden text-center mb-10">
             <h3 class="text-4xl font-medium mb-1">{{__('message.home_subtitle_11')}}</h3>
             <p class="tracking-wider text-gray-700 text-lg mb-1">{{__('message.home_subtitle_12')}} +51 990 229 181</p>
