@@ -80,14 +80,14 @@ class Reservations extends Component
     }
 
     public function register(){
-        $from ="tania.vanessa609@gmail.com";
+        $from ="admin@incontrimachupicchu.com";
         $email=$this->email;
         $name=$this->name;
         try {
             Mail::send(['html' => 'page.email.cliente'], ['nombre' => $this->name],
                 function ($messaje) use ($email, $name) { $messaje->to($this->email, $this->name)
                     ->subject('INCONTRI')
-                    ->from('tania.vanessa609@gmail.com', 'INCONTRI');
+                    ->from('admin@incontrimachupicchu.com', 'INCONTRI');
             });
             Mail::send(['html' => 'page.email.contact'], [
                     "date"=>$this->date,
@@ -101,7 +101,7 @@ class Reservations extends Component
                 ],
                 function ($messaje) use ($from) { $messaje->to($from, 'INCONTRI')
                     ->subject('INCONTRI - Reserva')
-                    ->from('tania.vanessa609@gmail.com', 'INCONTRI');
+                    ->from('admin@incontrimachupicchu.com', 'INCONTRI');
             });
             $this->reset('date');
             $this->reset('time');
