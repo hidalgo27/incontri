@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\page\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Redirect;
-use App\Http\Controllers\Page\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
