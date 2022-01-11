@@ -79,7 +79,9 @@ class Reservations extends Component
             ]);
         }
     }
-
+    public function load_submit(){
+        return 'loading';
+    }
     public function register(){
         $this->resetErrorBag();
         $this->validateData();

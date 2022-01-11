@@ -99,20 +99,21 @@
             @endif
 
             @if ($currentStep == 2 || $currentStep == 3 )
-                <button type="button" class="bg-crema px-6 py-2 rounded text-white font-semibold" wire:click="decreaseStep()">Back</button>
+                <button type="button" class="bg-crema px-6 py-2 rounded text-white font-semibold" wire:click="decreaseStep()">{{__('message.button_back')}}</button>
             @endif
             
             @if ($currentStep == 1 || $currentStep == 2 )
-                <button type="button" class=" bg-crema px-6 py-2 rounded text-white font-semibold" wire:click="increaseStep()">Next</button>
+                <button type="button" class=" bg-crema px-6 py-2 rounded text-white font-semibold" wire:click="increaseStep()">{{__('message.button_next')}}</button>
             @endif
             
             @if ($currentStep == 3)
-                 <button type="submit" class="bg-crema px-6 py-2 rounded text-white font-semibold" >Send</button>
+                <div wire:loading wire:target="load_submit" class="flex items-center justify-center gap-2">
+                    <p class=" text-xs text-crema font-semibold mx-auto">{{__('message.aux_5')}}</p>
+                    <div class="lds-ring mx-auto"><div></div><div></div><div></div></div>
+               </div>
+                 <button type="submit" class="bg-crema px-6 py-2 rounded text-white font-semibold" wire:click="load_submit()">{{__('message.button_send')}}</button>
             @endif
-                
-               
          </div>
-
      </form>
 
 

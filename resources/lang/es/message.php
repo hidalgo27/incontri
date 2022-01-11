@@ -119,6 +119,7 @@ return [
     'aux_2' => 'Transacción realizada exitosamente',
     'aux_3' => 'Gracias por su compra.',
     'aux_4' => 'Reserva realizada exitosamente',
+    'aux_5' => 'Enviando',
 
     'button_menu' => 'Ver Menu',
     'button_reserve' => 'Reservar',
