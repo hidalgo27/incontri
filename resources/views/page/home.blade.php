@@ -21,7 +21,30 @@
 {{--                </a>--}}
 {{--            </div>--}}
         </div>
-        <div class="relative mt-52  grid grid-cols-1 gap-6 place-items-center text-center justify-center text-white z-30">
+        <div class="relative mt-52  grid grid-cols-1 gap-6 place-items-center text-center justify-center text-white z-30"><a href="https://web.facebook.com/cicapuantasaqa" target="_blank" class="mx-2">
+                <div class="flex justify-end p-4 invisible sm:visible gap-2">
+{{--                    <a href="https://web.facebook.com/cicapuantasaqa" target="_blank" class="mx-2">--}}
+{{--                        <i data-feather="facebook" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                    </a>--}}
+{{--                    <a href="https://twitter.com/apuantasaqa" target="_blank" class="mx-2">--}}
+{{--                        <i data-feather="twitter" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                    </a>--}}
+{{--                    <a href="https://www.youtube.com/channel/UCvY1nlgzRfRgkB9EHUYCRyw" target="_blank" class="mx-2">--}}
+{{--                        <i data-feather="youtube" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                    </a>--}}
+{{--                    <a href="https://www.instagram.com/apuantasaqa/" target="_blank" class="mx-2">--}}
+{{--                        <i data-feather="instagram" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                    </a>--}}
+                    <a href="https://web.facebook.com/incontridelpuebloviejo/?_rdc=1&_rdr" target="_blank" class="bg-white rounded-lg h-8 w-8 transform hover:scale-125 transition duration-500 ease-in-out">
+
+                            <img src="{{asset('images/facebook.png')}}" class="h-8 w-8">
+
+                    </a>
+                    <a href="https://www.tripadvisor.com.pe/Restaurant_Review-g304036-d2460261-Reviews-Incontri_del_pueblo_Viejo-Aguas_Calientes_Machu_Picchu_Sacred_Valley_Cusco_Region.html" target="_blank"
+                       class="transform hover:scale-125 transition duration-500 ease-in-out">
+                        <img src="{{asset('images/trip.png')}}" class="h-8 w-8 ">
+                    </a>
+                </div>
             <div>
                 <h1 class="text-4xl font-cinzel text-gray-50 sm:text-6xl">{{__('message.home_title_1')}}</h1>
                 <h2 class="text-2xl font-cinzel text-gray-50 sm:text-2xl">{{__('message.home_title_3')}}</h2>
@@ -32,7 +55,7 @@
 
             </div>
             <div>
-                <a class="venobox" data-gall="myGallery" data-autoplay="true" data-maxwidth="1000px" data-vbtype="video" href="https://youtu.be/owe8tN8FaEw">
+                <a class="venobox" data-gall="myGallery" data-autoplay="true" data-maxwidth="1000px" data-vbtype="video" href="https://youtu.be/teT93b-G9YI">
                     <i data-feather="play-circle" class="text-gray-50 mx-auto" stroke-width="1" width="70" height="70"></i>
                 </a>
                 <h3 class="font-lusitana font-light mt-2 text-gray-50">{{__('message.button_menu')}}</h3>
