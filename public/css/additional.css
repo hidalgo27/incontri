@@ -38,7 +38,7 @@ li:hover > button svg { transform: rotate(-270deg) }
 #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
 #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-    color: #978667; 
+    color: #978667;
 }
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
@@ -104,3 +104,76 @@ input[type=number] {
       transform: rotate(360deg);
     }
   }
+
+/*header {*/
+/*    position: relative;*/
+/*    background-color: black;*/
+/*    height: 100vh;*/
+/*    min-height: 25rem;*/
+/*    width: 100%;*/
+/*    overflow: hidden;*/
+/*}*/
+/*header video {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    min-width: 100%;*/
+/*    min-height: 100%;*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    z-index: 0;*/
+/*    -ms-transform: translateX(-50%) translateY(-50%);*/
+/*    -moz-transform: translateX(-50%) translateY(-50%);*/
+/*    -webkit-transform: translateX(-50%) translateY(-50%);*/
+/*    transform: translateX(-50%) translateY(-50%);*/
+/*}*/
+
+/*header .container {*/
+/*    position: relative;*/
+/*    z-index: 2;*/
+/*}*/
+
+/*header .overlay {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    background-color: black;*/
+/*    opacity: 0.18;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.homepage-video iframe,.homepage-video img {*/
+/*    box-sizing: border-box;*/
+/*    height: 56.25vw;*/
+/*    left: 50%;*/
+/*    min-height: 100%;*/
+/*    min-width: 100%;*/
+/*    transform: translate(-50%,-50%);*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    width: 177.77777778vh;*/
+/*}*/
+/*.homepage-video .homepage-video-bg-16x9 {*/
+/*    width: 100%;*/
+/*    left: 0;*/
+/*    height: 100%;*/
+/*    overflow: hidden;*/
+/*    padding: 0;*/
+/*    position: absolute;*/
+
+/*}*/
+/*.cursor-pinter{*/
+/*    cursor: pointer;*/
+/*}*/
+/*@media (min-width: 1202px){*/
+/*    .homepage-video .homepage-video-bg{*/
+/*        display: block;*/
+/*        position: absolute;*/
+/*        top: 0;*/
+/*        bottom: 0;*/
+/*        width: 240vh;*/
+/*        left: calc(50vw - 50vh * 2.4);*/
+/*    }*/
+/*}*/

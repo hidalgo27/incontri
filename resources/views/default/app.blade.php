@@ -7,11 +7,12 @@
         <title>Incontri | Machupicchu</title>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/additional.css') }}" rel="stylesheet">
-        @livewireStyles        
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
-            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
+        <link href="{{ asset('css/plugins.css') }}" rel="stylesheet">
+        @livewireStyles
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
             crossorigin="anonymous">
-        </script> 
+        </script>
     </head>
     <body class="font-sans">
         <div class="flex lg:hidden  py-2 px-5 z-30 justify-between items-center">
@@ -35,7 +36,7 @@
                             {{count($cart)}}
                         @endif
                     </span>
-                    
+
                 </button>
                 @if($cart!=null)
                 <ul class="z-10 mt-2 bg-white border text-gray-800 border-t-2 border-crema font-semibold transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top right-3">
@@ -45,7 +46,7 @@
                                 if($item['descuento']){
                                     $precio_act=$item['price']-$item['descuento']/100*$item['price'];
                                 }
-                            @endphp 
+                            @endphp
                             <div class="flex gap-5 items-center text-gray-500 text-sm justify-between ">
                                 <div class="flex gap-1 items-center">
                                     <img src="https://admin.incontrimachupicchu.com/{{$item['imagen']}}" class="w-8 h-8">
@@ -59,7 +60,7 @@
                                             @endif
                                         </p>
                                     </a>
-                                </div>    
+                                </div>
                                 <button class="delete-to-cart hover:text-crema " type="button" data-id="{{$item['id']}}" >
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
@@ -78,7 +79,7 @@
             <button class=" block lg:inline-block my-1 text-sm text-left font-semibold hover:text-crema lg:mx-4 lg:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out border-b border-gray-200 py-2"><a  href="{{route('home')}}">{{__('message.nav_1')}}</a></button>
             <button id="clos-menu" class=" block lg:inline-block my-1 text-sm text-left font-semibold hover:text-crema lg:mx-4 lg:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out border-b border-gray-200 py-2" aria-label="toggle2">
                 <a class="flex items-center">
-                    {{__('message.nav_2')}} 
+                    {{__('message.nav_2')}}
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
@@ -94,7 +95,7 @@
             <button class=" block lg:inline-block my-1 text-sm text-left font-semibold hover:text-crema lg:mx-4 lg:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out border-b border-gray-200 py-2 w-full"><a href="{{route('reservations')}}">{{__('message.nav_4')}}</a></button>
             <button id="clos-leng" class=" block lg:inline-block my-1 text-sm text-left font-semibold hover:text-crema lg:mx-4 lg:my-0 transform hover:-translate-x-2 transition duration-500 ease-in-out border-b border-gray-200 py-2 w-full" aria-label="toggle3">
                 <a class="flex items-center">
-                    {{__('message.nav_7')}} 
+                    {{__('message.nav_7')}}
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
@@ -154,7 +155,7 @@
                                 {{count($cart)}}
                             @endif
                         </span>
-                        
+
                     </button>
                     @if($cart!=null)
                     <ul class="w-64 mt-2 bg-white border text-gray-800 border-t-2 border-crema font-semibold transform scale-0 group-hover:scale-100 absolute transition duration-150 ease-in-out origin-top right-3">
@@ -164,7 +165,7 @@
                                     if($item['descuento']){
                                         $precio_act=$item['price']-$item['descuento']/100*$item['price'];
                                     }
-                                @endphp 
+                                @endphp
                                 <div class="flex gap-5 items-center text-gray-500 text-sm justify-between">
                                     <div class="flex gap-1 items-center">
                                         <img src="https://admin.incontrimachupicchu.com/{{$item['imagen']}}" class="w-8 h-8">
@@ -178,7 +179,7 @@
                                                 @endif
                                             </p>
                                         </a>
-                                    </div>    
+                                    </div>
                                     <button class="delete-to-cart hover:text-crema" type="button" data-id="{{$item['id']}}" >
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                             <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
@@ -219,9 +220,9 @@
                 </div>
             </div>
         </div>
-        
+
         @yield('content')
-        
+
         <footer class="bg-black2 px-12 pt-10 pb-5 relative" id="contactar">
             <div class="frame black"></div>
             <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-2 container gap-8">
@@ -272,9 +273,15 @@
             </div>
         </footer>
     @livewireScripts
-    </body>     
-   
+    </body>
+
+    @stack('scripts')
+
+    <script src="{{asset('js/plugins.js')}}"></script>
+
 <script>
+    feather.replace();
+
     document.getElementById("clos").onclick = function toggleMenu() {
         const navToggle = document.getElementsByClassName("toggle");
         for (let i = 0; i < navToggle.length; i++) {
@@ -312,7 +319,7 @@
             elemento2.style.display = "none";
             elemento3.style.display = "block";
         }
-        
+
         var elemento2 = document.getElementById(id2);
         elemento2.style.display = "none";
     }
@@ -348,7 +355,7 @@
       target.value = value;
       }
     }
-  
+
     function increment(e) {
       const btn = e.target.parentNode.parentElement.querySelector(
         'button[data-action="decrement"]'
@@ -361,19 +368,19 @@
       target.value = value;
       }
     }
-  
+
     const decrementButtons = document.querySelectorAll(
       `button[data-action="decrement"]`
     );
-  
+
     const incrementButtons = document.querySelectorAll(
       `button[data-action="increment"]`
     );
-  
+
     decrementButtons.forEach(btn => {
       btn.addEventListener("click", decrement);
     });
-  
+
     incrementButtons.forEach(btn => {
       btn.addEventListener("click", increment);
     });

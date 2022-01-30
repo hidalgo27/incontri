@@ -1,61 +1,123 @@
 @extends('default.app')
 @section('content')
-    <div class="carousel relative shadow-2xl bg-white lg:-mt-8">
-        <div class="carousel-inner relative overflow-hidden w-full lg:pt-8">
-        <!--Slide 1-->
-            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div class="carousel-item absolute opacity-0">
-                <div class="block bg-main h-screen bg-cover bg-center">
-                    <div id="slider1" class=" absolute md:top-2/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <h4 class=" md:text-5xl text-3xl font-semibold text-center mb-4 text-white text-opacity-80">{{__('message.home_title_1')}}</h4>
-                        <p class="text-white text-opacity-60 font-medium md:text-xl text-lg text-center">{{__('message.home_title_3')}}</p><br>
-                        <div class="mt-4 text-center"><a href="{{route('menuMapi')}}"><button class="btn-primary">{{__('message.button_menu')}}</button></a></div>
-                    </div>
-                    <div class="h-20 w-20 bg-white absolute bottom-0 left-0">
-                    <img src="{{asset('images/TC_LL.svg')}}">
-                    </div>
-                </div>
-            </div>
-                
-            <!--Slide 2-->
-            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item absolute opacity-0" >
-                <div class="block bg-main2 h-screen bg-cover bg-center">
-                        <div id="slider2" class=" absolute left-0 md:top-1/2 top-1/3 md:pl-20 pl-5 hidden">
-                            <h4 class=" md:text-5xl text-3xl font-semibold text-white text-left mb-4">{{__('message.home_title_4')}} <br>{{__('message.home_title_5')}}<br>{{__('message.home_title_6')}}</h4>
-                            <p class="text-gray-300 md:text-xl text-lg md:text-left text-left font-medium">{{__('message.home_title_7')}}</p><br>
-                            <div class=" text-left"><a href="{{route('reservations')}}"><button class="btn-primary">{{__('message.button_reserve')}}</button></a></div>
-                        </div>
-                </div>
-            </div>
-            
-            <!--Slide 3-->
-            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item absolute opacity-0" >
-                <div class="block bg-main3 h-screen bg-cover bg-center">
-                <div id="slider3" class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-2/3 top-1/2 hidden">
-                        <h4 class=" md:text-5xl text-3xl font-semibold text-white text-center mb-2">{{__('message.home_title_8')}}</h4>
-                        <p class="text-gray-300 md:text-xl text-lg  text-center font-medium">{{__('message.home_title_9')}}</p><br>
-                        <div class="mt-4 text-center"><a  href="{{route('about')}}"><button class="btn-primary">{{__('message.button_ver')}}</button></a></div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Add additional indicators for each slide-->
-            <ol class="carousel-indicators">
-                <li class="inline-block mr-3">
-                    <label  for="carousel-1" onclick="ocultar('slider1');"  class="carousel-bullet cursor-pointer block text-5xl text-white hover:text-crema">•</label>
-                </li>
-                <li class="inline-block mr-3">
-                    <label for="carousel-2" onclick="ocultar('slider2');" class="carousel-bullet cursor-pointer block text-5xl text-white hover:text-crema">•</label>
-                </li>
-                <li class="inline-block mr-3">
-                    <label  for="carousel-3" onclick="ocultar('slider3');"  class="carousel-bullet cursor-pointer block text-5xl text-white hover:text-crema ">•</label>
-                </li>
-            </ol>
-            
+    <header class="relative flex flex-col justify-between h-screen overflow-hidden">
+        <div class="relative items-start grid grid-cols-3 justify-between z-30">
+{{--            <div></div>--}}
+{{--            <div class="p-3">--}}
+{{--                <a href="/"><img src="<?php echo e(asset('images/logo-apu.png')); ?>" alt="" class="w-60 mx-auto"></a>--}}
+{{--            </div>--}}
+{{--            <div class="flex justify-end p-8 invisible sm:visible">--}}
+{{--                <a href="https://web.facebook.com/cicapuantasaqa" target="_blank" class="mx-2">--}}
+{{--                    <i data-feather="facebook" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                </a>--}}
+{{--                <a href="https://twitter.com/apuantasaqa" target="_blank" class="mx-2">--}}
+{{--                    <i data-feather="twitter" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                </a>--}}
+{{--                <a href="https://www.youtube.com/channel/UCvY1nlgzRfRgkB9EHUYCRyw" target="_blank" class="mx-2">--}}
+{{--                    <i data-feather="youtube" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                </a>--}}
+{{--                <a href="https://www.instagram.com/apuantasaqa/" target="_blank" class="mx-2">--}}
+{{--                    <i data-feather="instagram" class="text-gray-50" stroke-width="1"></i>--}}
+{{--                </a>--}}
+{{--            </div>--}}
         </div>
-    </div>
+        <div class="relative mt-52  grid grid-cols-1 gap-6 place-items-center text-center justify-center text-white z-30">
+            <div>
+                <h1 class="text-4xl font-cinzel text-gray-50 sm:text-6xl">{{__('message.home_title_1')}}</h1>
+                <h2 class="text-2xl font-cinzel text-gray-50 sm:text-2xl">{{__('message.home_title_3')}}</h2>
+
+{{--                <h4 class=" md:text-5xl text-3xl font-semibold text-center mb-4 text-white text-opacity-80">{{__('message.home_title_1')}}</h4>--}}
+{{--                <p class="text-white text-opacity-60 font-medium md:text-xl text-lg text-center">{{__('message.home_title_3')}}</p><br>--}}
+{{--                <div class="mt-4 text-center"><a href="{{route('menuMapi')}}"><button class="btn-primary">{{__('message.button_menu')}}</button></a></div>--}}
+
+            </div>
+            <div>
+                <a class="venobox" data-gall="myGallery" data-autoplay="true" data-maxwidth="1000px" data-vbtype="video" href="https://youtu.be/owe8tN8FaEw">
+                    <i data-feather="play-circle" class="text-gray-50 mx-auto" stroke-width="1" width="70" height="70"></i>
+                </a>
+                <h3 class="font-lusitana font-light mt-2 text-gray-50">{{__('message.button_menu')}}</h3>
+                {{--                <a href="#"  class="px-12 py-3 text-xs font-light tracking-wider border border-gray-300 hover:bg-gray-200 hover:bg-opacity-5 transition duration-500 text-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-300">Explorar</a>--}}
+            </div>
+        </div>
+        <div class="relative z-30 p-5 flex justify-center">
+            <a href="#" class="text-gray-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="animate-bounce h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+        <video autoplay loop muted class="absolute z-10 w-auto min-w-full min-h-full max-w-none">
+            {{--            <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4" type="video/mp4" />Your browser does not support the video tag.--}}
+            <source src="{{asset('media/intro.mp4')}}" type="video/mp4" />Your browser does not support the video tag.
+            {{--            <source src="http://apuantasaqa.com/media/intro.mp4" type="video/mp4" />--}}
+        </video>
+        {{--        <div class="vimeo-wrapper absolute z-10 w-auto min-w-full min-h-full max-w-none">--}}
+        {{--            <iframe src="https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"--}}
+        {{--                    frameborder="0"  class="absolute z-10 w-auto min-w-full min-h-full max-w-none"></iframe>--}}
+        {{--        </div>--}}
+        <div class="absolute z-10 w-auto min-w-full min-h-full bg-gray-900 max-w-none opacity-50">
+
+        </div>
+        <div class="bg-footer-texture bg-repeat-x absolute h-6 bg-12 bottom-0 w-full z-30"></div>
+
+    </header>
+
+{{--    <div class="carousel relative shadow-2xl bg-white lg:-mt-8">--}}
+{{--        <div class="carousel-inner relative overflow-hidden w-full lg:pt-8">--}}
+{{--        <!--Slide 1-->--}}
+{{--            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">--}}
+{{--            <div class="carousel-item absolute opacity-0">--}}
+{{--                <div class="block bg-main h-screen bg-cover bg-center">--}}
+{{--                    <div id="slider1" class=" absolute md:top-2/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">--}}
+{{--                        <h4 class=" md:text-5xl text-3xl font-semibold text-center mb-4 text-white text-opacity-80">{{__('message.home_title_1')}}</h4>--}}
+{{--                        <p class="text-white text-opacity-60 font-medium md:text-xl text-lg text-center">{{__('message.home_title_3')}}</p><br>--}}
+{{--                        <div class="mt-4 text-center"><a href="{{route('menuMapi')}}"><button class="btn-primary">{{__('message.button_menu')}}</button></a></div>--}}
+{{--                    </div>--}}
+{{--                    <div class="h-20 w-20 bg-white absolute bottom-0 left-0">--}}
+{{--                    <img src="{{asset('images/TC_LL.svg')}}">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--            <!--Slide 2-->--}}
+{{--            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">--}}
+{{--            <div class="carousel-item absolute opacity-0" >--}}
+{{--                <div class="block bg-main2 h-screen bg-cover bg-center">--}}
+{{--                        <div id="slider2" class=" absolute left-0 md:top-1/2 top-1/3 md:pl-20 pl-5 hidden">--}}
+{{--                            <h4 class=" md:text-5xl text-3xl font-semibold text-white text-left mb-4">{{__('message.home_title_4')}} <br>{{__('message.home_title_5')}}<br>{{__('message.home_title_6')}}</h4>--}}
+{{--                            <p class="text-gray-300 md:text-xl text-lg md:text-left text-left font-medium">{{__('message.home_title_7')}}</p><br>--}}
+{{--                            <div class=" text-left"><a href="{{route('reservations')}}"><button class="btn-primary">{{__('message.button_reserve')}}</button></a></div>--}}
+{{--                        </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--            <!--Slide 3-->--}}
+{{--            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">--}}
+{{--            <div class="carousel-item absolute opacity-0" >--}}
+{{--                <div class="block bg-main3 h-screen bg-cover bg-center">--}}
+{{--                <div id="slider3" class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-2/3 top-1/2 hidden">--}}
+{{--                        <h4 class=" md:text-5xl text-3xl font-semibold text-white text-center mb-2">{{__('message.home_title_8')}}</h4>--}}
+{{--                        <p class="text-gray-300 md:text-xl text-lg  text-center font-medium">{{__('message.home_title_9')}}</p><br>--}}
+{{--                        <div class="mt-4 text-center"><a  href="{{route('about')}}"><button class="btn-primary">{{__('message.button_ver')}}</button></a></div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+{{--            <!-- Add additional indicators for each slide-->--}}
+{{--            <ol class="carousel-indicators">--}}
+{{--                <li class="inline-block mr-3">--}}
+{{--                    <label  for="carousel-1" onclick="ocultar('slider1');"  class="carousel-bullet cursor-pointer block text-5xl text-white hover:text-crema">•</label>--}}
+{{--                </li>--}}
+{{--                <li class="inline-block mr-3">--}}
+{{--                    <label for="carousel-2" onclick="ocultar('slider2');" class="carousel-bullet cursor-pointer block text-5xl text-white hover:text-crema">•</label>--}}
+{{--                </li>--}}
+{{--                <li class="inline-block mr-3">--}}
+{{--                    <label  for="carousel-3" onclick="ocultar('slider3');"  class="carousel-bullet cursor-pointer block text-5xl text-white hover:text-crema ">•</label>--}}
+{{--                </li>--}}
+{{--            </ol>--}}
+
+{{--        </div>--}}
+{{--    </div>--}}
     <section class="pt-1">
         <div class="grid md:grid-cols-3 grid-cols-1 gap-1">
             <div class="card-zoom">
@@ -83,7 +145,7 @@
                 <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-white">
                     <h4 class="font-bold text-2xl text-center">{{__('message.home_subtitle_2')}}</h4>
                 </div>
-            </div>                     
+            </div>
         </div>
     </section>
     <section class="bg-banner py-20 container">
@@ -143,7 +205,7 @@
             <p class="font-semibold text-5xl text-white mb-2">{{__('message.home_ora')}}</p>
             <p class="text-white tracking-wider text-lg mb-4">{{__('message.home_ora2')}}</p>
             <p class="text-gray-300 leading-relaxed mb-4" >
-                {{__('message.home_ora3')}}    
+                {{__('message.home_ora3')}}
             </p>
             <div class="mb-4 mt-8"><a href="{{route('home')}}#contactar"><button class="btn-primary">{{__('message.home_ora4')}}</button></a></div>
         </div>
@@ -170,7 +232,13 @@
 @endsection
 
 @push('scripts')
-<script>
-    
-</script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        // $(document).ready(function(){
+        //     $('.venobox').venobox();
+        // });
+        new VenoBox({
+            selctor: '.venobox'
+        });
+    </script>
 @endpush

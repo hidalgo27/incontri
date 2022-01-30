@@ -15,3 +15,8 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         require("tailwindcss"),
     ]);
+mix.postCss('resources/css/plugins.css', 'public/css');
+mix.scripts([
+    'node_modules/feather-icons/dist/feather.js',
+    'node_modules/venobox/dist/venobox.min.js',
+], 'public/js/plugins.js');

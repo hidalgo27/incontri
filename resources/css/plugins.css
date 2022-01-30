@@ -1,0 +1,5 @@
+/*venobox*/
+@import "~venobox/dist/venobox.css";
+.venoframe.vbvid{
+    margin: 0 auto;
+}
